@@ -1,0 +1,12 @@
+h1 {
+	color: #098799;
+	font-size: 150px;
+}
+
+p {
+	text-indent: 100px;
+	text-decoration: line-through; 
+	text-transform: capitalize;
+	word-spacing: 10px;
+}
+ 

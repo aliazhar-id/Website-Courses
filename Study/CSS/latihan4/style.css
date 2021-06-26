@@ -1,0 +1,21 @@
+.container {
+	width: 900px;
+	margin: auto;
+	border: 1px solid black;
+}
+
+.satu {
+	background-color: salmon;
+	height: 500px;
+	width: 550px;
+	display: inline-block;
+	overflow: scroll;
+}
+
+.dua {
+	background-color: limegreen;
+	height: 300px;
+	width: 300px;
+	float: right;
+	display: inline-block;
+}

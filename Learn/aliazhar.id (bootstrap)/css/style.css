@@ -1,0 +1,27 @@
+body {
+	margin-top: 45px;
+}
+
+hr {
+	width: 250px;
+	border-top: 3px solid #999;
+}
+
+.jumbo {
+	background-color: #5368f1;
+	color: white;
+	border-radius: 5px;
+}
+
+footer {
+	margin-top: 10px;
+}
+
+footer p {
+	color: #aaa;
+	font-size: 0.9em;
+}
+
+footer p a {
+	color: inherit;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDK</title>
+</head>
+
+<body>
+    <form action="javascript:void(0);" id="frmAbsensi" onsubmit="frmKelola('#frmAbsensi');"><br/>
+        <input type="text" name="" id="npm" placeholder="NPM Mahasiswa"><br/>
+        <input type="text" name="" id="nama" placeholder="Nama Mahasiswa"><br/>
+        <select id="keterangan"><br/>
+            <option value="Hadir">Hadir</option>
+            <option value="Izin">Izin</option>
+            <option value="Alpa">Alpa</option>
+        </select><br/>
+        <button type="submit">Simpan</button>
+        <button onclick="deletedata();">Hapus</button>
+    </form>
+    <h3>Absensi Mahasiswa</h3>
+    <table id="tableku" border="1">
+        <thead>
+            <tr>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        function ambilData(idnya) {
+            frm = document.querySelector(idnya);
+            if (frm) {
+                for (i = 0, dataku = {}; i < frm.length; i++) {
+                    if (frm[i].type !== "submit") {
+                        dataku[`${frm[i].id}`] = frm[i].value;
+                    }
+                }
+                return dataku
+            }
+        }
+
+        function tarokTable(datanya, idtable) {
+            tablenya = document.getElementById(idtable);
+            zz = Object.keys(datanya);
+            hasil = `<tr onclick="deletedata(this)" id="${datanya.npm}">`
+            zz.forEach((isinya, i) => {
+                hasill = `<td>${datanya[isinya]}</td>`
+                hasil += hasill;
+            });
+            tablenya.getElementsByTagName('tbody')[0].innerHTML += hasil
+        }
+
+        async function frmKelola(idnya) {
+            aaa = await ambilData(idnya);
+            tarokTable(aaa, "tableku");
+        }
+
+        function deletedata(disini) {
+            disini.remove()
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 - Fonts</title>
+	<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> -->
+	<style>
+		/*<!-- type ttf -->*/
+		@font-face {
+			font-family: "Alex Brush";
+			src: url('AlexBrush-Regular.ttf') format('truetype');
+		}
+		/*type woff */
+		@font-face {
+		    font-family: 'alex_brushregular';
+		    src: url('alexbrush-regular-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+
+		h1 {
+			font-size: 100px;
+			text-align: center;
+			/*font-family: 'Indie Flower', cursive;*/
+			font-family: "alex_brushregular", arial;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Hello World</h1>
+
+</body>
+</html>

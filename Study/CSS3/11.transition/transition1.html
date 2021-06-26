@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transition 1</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			width: 900px;
+			margin: 10px auto;
+			border: 5px solid black;
+		}
+		.kotak {  /*keadaan awal*/
+			width: 100px;
+			height: 100px;
+			background-color: salmon;
+			transition: margin-left 3s, transform 3s 2s, background-color 500ms 3s;
+		}
+		.container:hover .kotak { /*keadaan ahir*/
+			transform: rotate(720deg);
+			margin-left: 800px;
+			background-color: royalblue;
+		}  
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="kotak kotak1"></div>
+	</div>
+</body>
+</html>
